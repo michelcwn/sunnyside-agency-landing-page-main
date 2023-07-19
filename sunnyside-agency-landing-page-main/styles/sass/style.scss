@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:ital,wght@0,900;1,700&display=swap");
+
+$Soft-red: hsl(7, 99%, 70%);
+$Yellow: hsl(51, 100%, 49%);
+$Dark-desaturated-cyan: hsl(167, 40%, 24%);
+// (graphic design text)
+$Dark-blue: hsl(198, 62%, 26%);
+// (photography text)
+$Dark-moderate-cyan: hsl(168, 34%, 41%);
+// (footer)
+
+$Very-dark-desaturated-blue: hsl(212, 27%, 19%);
+$Very-dark-grayish-blue: hsl(213, 9%, 39%);
+$Dark-grayish-blue: hsl(232, 10%, 55%);
+$Grayish-blue: hsl(210, 4%, 67%);
+$White: hsl(0, 0%, 100%);
+
+%cherry-orange-pos {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+    line-height: 3rem;
+    color: $Very-dark-desaturated-blue;
+}
+
+%text-2 {
+    text-align: center;
+    position: absolute;
+    bottom: 10%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-image: url(../../images/desktop/image-header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+
+    .top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            width: 15%;
+            padding: 3rem;
+            img {
+                width: 100%;
+            }
+        }
+
+        .burger-menu {
+            display: none;
+        }
+    }
+
+    .header__nav {
+        .nav-close {
+            display: none;
+        }
+        ul {
+            display: flex;
+            margin-right: 1rem;
+            li {
+                list-style: none;
+                color: $White;
+                padding: 1.5rem 2.5rem;
+            }
+            .contact {
+                color: $Very-dark-desaturated-blue;
+                background-color: white;
+                margin: 0 auto;
+                width: 150px;
+                border-radius: 10rem;
+                text-align: center;
+                font-family: "fraunces";
+                text-transform: uppercase;
+                font-size: 1.6rem;
+
+                &:hover {
+                    background-color: #6ccfff;
+                }
+                a {
+                    text-decoration: none;
+                    padding-left: 0.75rem;
+                    display: block;
+                    width: fit-content;
+                    &:visited {
+                        color: $Very-dark-desaturated-blue;
+                    }
+                    &:visited:hover {
+                        color: $White;
+                    }
+                }
+            }
+        }
+    }
+    h1 {
+        margin-top: 12rem;
+        text-align: center;
+        font-size: 8rem;
+        font-family: "Fraunces", serif;
+        font-weight: 900;
+        color: $White;
+        letter-spacing: 0.75rem;
+    }
+    .arrow {
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        height: 250px;
+    }
+}
+
+main {
+    section {
+        article {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 50%;
+            }
+            .text {
+                width: 50%;
+                padding: 12rem;
+                h2 {
+                    font-size: 3rem;
+                    font-family: "Fraunces", serif;
+                    font-weight: 700;
+                    color: $Very-dark-desaturated-blue;
+                }
+                p {
+                    line-height: 3rem;
+                    color: $Very-dark-grayish-blue;
+                    width: 75%;
+
+                    line-height: 4rem;
+                }
+                a {
+                    text-decoration: none;
+                    font-size: 2rem;
+                    color: $Very-dark-desaturated-blue;
+                    border-bottom: 1rem solid #fdf5b7;
+                    font-family: "Fraunces", serif;
+                    font-weight: 700;
+                    &:hover {
+                        border-bottom: 1rem solid $Yellow;
+                    }
+                }
+                .learn-2 {
+                    border-bottom: 1rem solid #fdd8d0;
+
+                    &:hover {
+                        border-bottom: 1rem solid $Soft-red;
+                    }
+                }
+            }
+        }
+        .width-50 {
+            display: flex;
+            height: 80vh;
+
+            .cherry {
+                background-image: url(../../images/desktop/image-graphic-design.jpg);
+                @extend %cherry-orange-pos;
+                position: relative;
+
+                .text-2 {
+                    @extend %text-2;
+                    p {
+                        padding: 0 10rem;
+                    }
+                }
+            }
+            .orange {
+                background-image: url(../../images/desktop/image-photography.jpg);
+                @extend %cherry-orange-pos;
+                position: relative;
+
+                .text-2 {
+                    @extend %text-2;
+                    p {
+                        padding: 0 10rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .feedback {
+        margin-bottom: 10rem;
+        h3 {
+            text-align: center;
+            font-size: 1.5rem;
+            font-family: "Fraunces";
+            font-weight: 900;
+            color: $Grayish-blue;
+            text-transform: uppercase;
+            letter-spacing: 1rem;
+            margin-top: 10rem;
+        }
+        .feedback-article {
+            display: flex;
+            justify-content: space-around;
+            .testimonials {
+                display: flex;
+                flex-direction: column;
+                padding: 1rem;
+                width: 30%;
+
+                img {
+                    border-radius: 25rem;
+                    width: 17%;
+                    margin: 7rem;
+                }
+
+                p {
+                    color: $Very-dark-grayish-blue;
+                    line-height: 4rem;
+                    padding: 0 3rem;
+                    text-align: center;
+
+                    strong {
+                        font-family: "fraunces";
+                        font-weight: 900;
+                        color: $Very-dark-desaturated-blue;
+                    }
+                }
+                .job {
+                    font-size: 1.5rem;
+                    color: $Dark-grayish-blue;
+                }
+            }
+        }
+    }
+    .gallery {
+        display: flex;
+        img {
+            width: 25%;
+        }
+    }
+}
+
+footer {
+    background-color: #90d4c5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10rem;
+    img {
+        filter: invert(54%) sepia(11%) saturate(1467%) hue-rotate(118deg) brightness(88%) contrast(91%);
+    }
+    ul {
+        display: flex;
+        li {
+            list-style: none;
+            padding: 3rem;
+            color: $Dark-desaturated-cyan;
+            &:hover {
+                color: $White;
+            }
+        }
+    }
+    .icons {
+        .fab {
+            color: $Dark-desaturated-cyan;
+            padding: 0 2rem;
+            &:hover {
+                color: $White;
+            }
+        }
+    }
+}
+
+//************************** TABLETTE **************************
+
+@media screen and (max-width: 1100px) {
+    header {
+        h1 {
+            font-size: 6rem;
+        }
+        .top {
+            .logo {
+                width: 25%;
+            }
+        }
+    }
+    main {
+        section {
+            display: flex;
+            flex-direction: column;
+            article {
+                display: flex;
+                flex-direction: column;
+                img {
+                    width: 100vw;
+                    order: 1;
+                }
+                .text {
+                    width: 100vw;
+                }
+            }
+            .width-50 {
+                display: flex;
+                height: 100vh;
+                flex-wrap: wrap;
+                .cherry,
+                .orange {
+                    width: 100%;
+                    height: 50vh;
+                }
+            }
+        }
+        .feedback {
+            z-index: 10;
+            .feedback-article {
+                display: flex;
+
+                flex-wrap: wrap;
+                .testimonials {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    img {
+                        order: -1;
+                    }
+                }
+            }
+        }
+        .gallery {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            img {
+                width: 50%;
+            }
+        }
+    }
+}
+
+//************************** MOBILE **************************
+
+@media screen and (max-width: 780px) {
+    header {
+        h1 {
+            font-size: 6rem;
+        }
+        .arrow {
+            top: 50%;
+            left: 42%;
+            height: 200px;
+        }
+    }
+    main {
+        section {
+            article {
+                .text {
+                    padding: 2rem;
+                    margin: 3rem;
+                    text-align: center;
+                    p {
+                        width: 100%;
+                    }
+                }
+            }
+
+            .width-50 {
+                .cherry,
+                .orange {
+                    background-position: center;
+
+                    .text-2 {
+                        bottom: 1%;
+                        p {
+                            padding: 0;
+                        }
+                    }
+                }
+            }
+        }
+        .feedback {
+            h3 {
+                line-height: 3rem;
+            }
+        }
+    }
+
+    footer {
+        padding: 10rem 0;
+    }
+}
+
+@media screen and (max-width: 810px) {
+    header {
+        .top {
+            .header__nav {
+                position: fixed; /* Fixed position to cover entire screen */
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
+                display: none; /* Initially hidden */
+                z-index: 1000; /* High z-index to appear over other elements */
+                /* Add your other styles */
+                .nav-close {
+                    display: block;
+                }
+                ul {
+                    height: 500px;
+                    display: flex; /* Show when the menu is open */
+                    flex-direction: column; /* Stack the menu items vertically */
+                    justify-content: space-around; /* Center the menu items vertically */
+                    align-items: center; /* Center the menu items horizontally */
+                }
+
+                .nav-close {
+                    position: absolute;
+                    top: 20px; /* Adjust as needed */
+                    right: 20px; /* Adjust as needed */
+                    background: none;
+                    border: none;
+                    font-size: 30px; /* Adjust as needed */
+                    color: white; /* Adjust as needed */
+                }
+            }
+            padding-right: 2.5rem;
+            .burger-menu {
+                display: block;
+                width: 50px; /* Adjust as needed */
+                height: 50px; /* Adjust as needed */
+                background-color: transparent;
+                position: relative;
+                border: none;
+                cursor: pointer;
+
+                &::before,
+                &::after,
+                .burger-menu__line {
+                    content: "";
+                    background-color: $White;
+                    position: absolute;
+                    left: 0;
+                    width: 100%;
+                    height: 3px;
+                }
+
+                &::before {
+                    top: 10px; /* Adjust as needed */
+                }
+
+                &::after {
+                    bottom: 10px; /* Adjust as needed */
+                }
+
+                .burger-menu__line {
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+}
